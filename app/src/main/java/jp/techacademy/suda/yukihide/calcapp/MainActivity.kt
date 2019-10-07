@@ -6,46 +6,42 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
 
-//class MainActivity : AppCompatActivity(), View.OnClickListener {
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-
-    //var i1 : Double = num1.toDouble()
-    //var num2 = editText2.text.toString()
-    //var i2 : Double = num2.toDouble()
+        val num1 : String = editText1.text.toString()
+        val i1: Double = num1.toDouble()
+        val num2 = editText2.text.toString()
+        val i2: Double = num2.toDouble()
+        //val resultNum : Double = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         button1.setOnClickListener{
-            var num1 : String = editText1.text.toString()
-            var i1 : Double = num1.toDouble()
-            textView.text = i1
+            //resultNum = i1 + i2
+            //textView.text = Integer.toString(resultNum)
         }
 
-/*
+        /*
         button2.setOnClickListener{
-            resultNum = num1 - num2
+            var resultNum : Double = i1 - i2
+            textView.text = Integer.toString(resultNum)
         }
         button3.setOnClickListener{
-            resultNum = num1 * num2
+            var resultNum : Double = i1 * i2
+            textView.text = Integer.toString(resultNum)
         }
         button4.setOnClickListener{
-            resultNum = num1 / num2
+            var resultNum : Double = i1 / i2
+            textView.text = Integer.toString(resultNum)
         }
-*/
+        */
     }
-/*
-    override fun onClick(v: View?) {
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra("VALUE1", resultNum)
-        startActivity(intent)
 
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra("VALUE1", 10)
-        intent.putExtra("VALUE2", 20)
-        startActivity(intent)
+    override fun onClick(v: View?) {
+        //val intent = Intent(this, SecondActivity::class.java)
+        //intent.putExtra("VALUE1", resultNum)
+        //startActivity(intent)
     }
-*/
 }
